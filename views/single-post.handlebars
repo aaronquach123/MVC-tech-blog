@@ -1,0 +1,23 @@
+<!-- displaying articles -->
+{{> post-info post}}
+
+<!-- displaying form and comments-->
+<!-- only display if logged in -->
+{{#if loggedIn}}
+<form class="comment-form">
+  <div>
+    <textarea class="form-control" name="comment-body"></textarea>
+  </div>
+
+  <div>
+    <button class="btn btn-success" type="submit">Add comment</button>
+  </div>
+  
+</form>
+{{/if}}
+
+{{> comments post.comments}}
+
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+{{/if}}

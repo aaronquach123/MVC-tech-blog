@@ -1,0 +1,17 @@
+<div class="container">
+  <header class="post-title">
+        <div class="p-2 mt-2 bg-primary border rounded">
+            <a href="/post/{{id}}"  class="text-white">{{title}} </a></p>
+        </div>
+    </header>
+
+    <div>
+        <div class="post-content mb-2">
+            {{post_content}}
+        </div>
+            <div>
+                <b>{{user.username}}</b> | 
+                 | {{format_date created_at}} | <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+            </div>
+        
+    </div>
